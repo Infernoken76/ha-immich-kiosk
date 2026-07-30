@@ -1,1 +1,45 @@
-
+name: "Immich Kiosk"
+version: "latest"
+slug: "immich_kiosk"
+description: "Live slideshow van een Immich-album (bv. voor een feestje) op een TV/scherm"
+url: "https://github.com/damongolding/immich-kiosk"
+arch:
+  - aarch64
+  - amd64
+  - armv7
+image: "damongolding/immich-kiosk"
+startup: application
+boot: auto
+init: false
+host_network: false
+ports:
+  "3000/tcp": 3000
+ports_description:
+  "3000/tcp": "Kiosk web UI"
+options:
+  KIOSK_IMMICH_URL: "http://homeassistant.local:2283"
+  KIOSK_IMMICH_API_KEY: ""
+  KIOSK_ALBUMS: ""
+  KIOSK_DURATION: "8"
+  KIOSK_FETCHED_ASSETS_SIZE: "200"
+  KIOSK_CACHE: "true"
+  KIOSK_PREFETCH: "true"
+  KIOSK_SHOW_TIME: "false"
+schema:
+  KIOSK_IMMICH_URL: "url"
+  KIOSK_IMMICH_API_KEY: "password"
+  KIOSK_ALBUMS: "str"
+  KIOSK_DURATION: "str"
+  KIOSK_FETCHED_ASSETS_SIZE: "str"
+  KIOSK_CACHE: "bool"
+  KIOSK_PREFETCH: "bool"
+  KIOSK_SHOW_TIME: "bool"
+environment:
+  KIOSK_IMMICH_URL: "[[KIOSK_IMMICH_URL]]"
+  KIOSK_IMMICH_API_KEY: "[[KIOSK_IMMICH_API_KEY]]"
+  KIOSK_ALBUMS: "[[KIOSK_ALBUMS]]"
+  KIOSK_DURATION: "[[KIOSK_DURATION]]"
+  KIOSK_FETCHED_ASSETS_SIZE: "[[KIOSK_FETCHED_ASSETS_SIZE]]"
+  KIOSK_CACHE: "[[KIOSK_CACHE]]"
+  KIOSK_PREFETCH: "[[KIOSK_PREFETCH]]"
+  KIOSK_SHOW_TIME: "[[KIOSK_SHOW_TIME]]"
