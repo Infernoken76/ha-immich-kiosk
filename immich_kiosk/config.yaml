@@ -7,7 +7,7 @@ arch:
   - aarch64
   - amd64
   - armv7
-image: "damongolding/immich-kiosk"
+image: "ghcr.io/damongolding/immich-kiosk"
 startup: application
 boot: auto
 init: false
@@ -17,7 +17,7 @@ ports:
 ports_description:
   "3000/tcp": "Kiosk web UI"
 options:
-  KIOSK_IMMICH_URL: "http://homeassistant.local:2283"
+  KIOSK_IMMICH_URL: "http://192.168.1.60:8181"
   KIOSK_IMMICH_API_KEY: ""
   KIOSK_ALBUMS: ""
   KIOSK_DURATION: "8"
