@@ -18,7 +18,7 @@ ports_description:
   "3000/tcp": "Kiosk web UI"
 environment:
   KIOSK_IMMICH_URL: "http://192.168.1.60:8181"
-  KIOSK_IMMICH_API_KEY: "dXGZygEOS1dq9e1QfvZ6ILfkwNwToapXBadktaExc"
+  KIOSK_IMMICH_API_KEY: "4edhcwMATHPcWYNsKfvq9vItmxJUIoa0Hfek1RTQ2M"
   KIOSK_ALBUMS: "c7251e10-8dcc-42ba-a35a-4dbca65fc865"
   KIOSK_DURATION: "8"
   KIOSK_FETCHED_ASSETS_SIZE: "200"
